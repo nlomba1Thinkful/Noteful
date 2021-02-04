@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding:0;
+}
+#root {
+    width: 100%;
+}
+header {
+    background-color: black;
+    text-align: center;
+    padding: 8px 0 8px 0;
+}
+.appTitle {
+    color: white;
+}
+main {
+    display: flex;
+    flex-direction: row;
+}
+nav {
+    flex: 1;
+    border: solid black 2px;
+    background-color: rgb(49, 49, 49);
+}
+.activeFolder, nav ul li {
+    background-color: rgb(70, 19, 19);
+    transition: background-color .2s;
+}
+nav ul li {
+    display: flex;
+    border: none;
+    background-color: rgb(27, 27, 27);
+    padding: 8px;
+    margin: 8px;
+    list-style-type: none;
+    color: white;
+    justify-content: center;
+}
+nav ul li:active {
+    background-color: red;
+}
+nav ul li:hover {
+    cursor: pointer;
+    background-color: rgb(70, 19, 19);
+}
+.output {
+    flex: 3;
+}
+.output ul {
+    list-style-type: none;
+}
+.note {
+    list-style-type: none;
+    padding: 8px;
+    border: solid black 1px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    background-color: rgb(33, 38, 42);
+    color:aliceblue;
+}
+.new-note-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: rgb(207, 207, 207);
+}
+.submit-note {
+    margin: auto;
+    margin-top: 16px;
+    padding: 8px;
+    font-size: 16px;
+
+}
+.add-note-btn {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+.note button {
+    width: 50px;
+    justify-self: flex-end;
+    list-style-type: none;
+}
+.notFound {
+    padding: 16px;
+    color: red;
+    background-color: rgb(26, 26, 26);
+}
+.addNewFolder {
+    display: flex;
+    flex-direction: column;
+}
+.add-folder-btn {
+    background-color: rgb(9, 53, 9);
+    color: white;
+    border: none;
+    padding: 4px;
+    width: 120px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.add-folder-btn:hover {
+    cursor: pointer;
+    background-color:  rgb(15, 87, 15);
+}
+.errors {
+    background-color: pink;
+    color: brown;
+    margin-left: 16px;
+    margin-top: 4px;
+    width: 300px;
+    text-align: center;
+}
+a:visited {
+    color: white;
+}
+a {
+    color: rgb(163, 255, 140);
+}
