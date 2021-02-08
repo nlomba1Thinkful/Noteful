@@ -17,7 +17,7 @@ export default class AddNote extends React.Component {
       touched: false,
     },
     folder: {
-      value: "",
+      value: this.props.folders[0].id,
       touched: false,
     },
   };
@@ -52,6 +52,7 @@ export default class AddNote extends React.Component {
   }
   updateFolder(id) {
     this.setState({ folder: { value: id, touched: true } });
+    console.log(id);
   }
 
   render() {
@@ -118,6 +119,7 @@ export default class AddNote extends React.Component {
             <label htmlFor="folder-selection">Folder:</label>
             <select
               id="folder-selection"
+              value={this.state.folder}
               onChange={(e) => this.updateFolder(e.target.value)}
             >
               {folderOptions()}
