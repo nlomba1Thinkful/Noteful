@@ -61,7 +61,7 @@ export default class AddNote extends React.Component {
     console.log(now);
     const handleSubmitNote = (e) => {
       e.preventDefault();
-      console.log(this.state.name.value);
+      console.log(this.state.content.value);
       fetch(`${BASE_URL}/notes`, {
         method: "POST",
         headers: {
@@ -88,6 +88,7 @@ export default class AddNote extends React.Component {
     };
     const folderOptions = () => {
       return folders.map((folder) => {
+        console.log(this.state.folder.value, folder.id);
         return (
           <option key={folder.id} value={folder.id}>
             {folder.name}
@@ -119,7 +120,7 @@ export default class AddNote extends React.Component {
             <label htmlFor="folder-selection">Folder:</label>
             <select
               id="folder-selection"
-              value={this.state.folder}
+              value={this.state.folder.value}
               onChange={(e) => this.updateFolder(e.target.value)}
             >
               {folderOptions()}

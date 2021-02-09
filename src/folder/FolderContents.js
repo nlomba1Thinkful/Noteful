@@ -38,13 +38,15 @@ export default class FolderContents extends React.Component {
         });
     };
     const displayNotes = () => {
-      const notesToShow = getNotes(notes, folderId);
+      const notesToShow = getNotes(notes, parseInt(folderId));
+      console.log(notes, notesToShow);
       return notesToShow.map((note) => {
+        console.log(note);
         return (
           <li key={note.id} className="note">
             {/* add link to note */}
             <h2>
-              <Link to={`/note/${note.id}`}>{note.title}</Link>
+              <Link to={`/note/${note.id}`}>{note.name}</Link>
             </h2>
             <p>
               Date modified: {format(new Date(note.modified), "MM/dd/yyyy")}

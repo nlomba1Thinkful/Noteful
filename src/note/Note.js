@@ -23,6 +23,7 @@ export default class Note extends React.Component {
 
   render() {
     const { notes = [] } = this.context;
+    console.log("string", notes);
     const { noteId } = this.props.match.params;
     const handleClickDelete = (e) => {
       e.preventDefault();
