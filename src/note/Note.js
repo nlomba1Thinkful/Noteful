@@ -47,12 +47,13 @@ export default class Note extends React.Component {
     };
 
     const currentNote = findNote(notes, noteId);
+    console.log(notes, noteId);
     if (currentNote) {
       return (
         <section>
           <div className="note">
             <h2>
-              <Link to={`/note/${currentNote.id}`}>{currentNote.title}</Link>
+              <Link to={`/note/${currentNote.id}`}>{currentNote.name}</Link>
             </h2>
             <p>
               Date modified:{" "}
@@ -66,7 +67,6 @@ export default class Note extends React.Component {
         </section>
       );
     }
-    return <Redirect to={"/"} />;
   }
 }
 
