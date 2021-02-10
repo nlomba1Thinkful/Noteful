@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { format } from "date-fns";
 import PropTypes from "prop-types";
 
